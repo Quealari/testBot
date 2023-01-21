@@ -13,16 +13,29 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>testBot</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
-		<java.version>15</java.version>
-		<maven.compiler.target>15</maven.compiler.target>
+		<java.version>19</java.version>
+		<maven.compiler.target>19</maven.compiler.target>
+		<telegram.version>6.4.0</telegram.version>
 	</properties>
-
-
 	<dependencies>
+
+		<dependency>
+			<groupId>org.telegram</groupId>
+			<artifactId>telegrambots</artifactId>
+			<version>${telegram.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -30,16 +43,14 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit-platform -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-junit-platform</artifactId>
+			<version>3.0.0-M4</version>
 		</dependency>
-		<dependency>
-			<groupId>org.telegram</groupId>
-			<artifactId>telegrambots</artifactId>
-			<version>6.4.0</version>
-		</dependency>
+
+
 	</dependencies>
 
 	<build>
